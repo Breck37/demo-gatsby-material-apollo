@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 import { Query } from 'react-apollo';
@@ -50,6 +49,7 @@ const IndexPage = ({data : {swapi: {Starship: {name, hyperdriveRating, pilots}}}
   let pilotListItems = []
   pilots.map((p, i) => {
     pilotListItems.push(<li key={i}>{p.name}</li>)
+    return
   });
   return (
     <Layout>
@@ -67,7 +67,10 @@ const IndexPage = ({data : {swapi: {Starship: {name, hyperdriveRating, pilots}}}
           return (<p>{Starship.name}</p>);
         }}
       </Query>
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/auth/login/">Login</Link>
+      <br />
+      <Link to="/auth/register">Register</Link>
+
     </Layout>
   )
 }
