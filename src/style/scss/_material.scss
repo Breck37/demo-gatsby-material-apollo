@@ -1,0 +1,84 @@
+
+$mdc-theme-primary: #444D4D;
+$mdc-theme-on-primary: #FFFFFF;
+$mdc-theme-accent: #FFCA28;
+$mdc-theme-secondary: #cd7b54;
+$mdc-theme-on-secondary: if(mdc-theme-contrast-tone($mdc-theme-secondary) == "dark", #000, #fff);
+$mdc-theme-background: #F0F0F0;
+$mdc-theme-surface: #FFFFFF;
+$mdc-theme-on-surface: #222222;
+
+$montserrat: Montserrat, sans-serif;
+$openSans: Open Sans, sans-serif;
+
+$mdc-typography: (
+  font-family: $openSans
+); 
+
+$mdc-typography-styles-headline1: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-headline2: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-headline3: (
+  font-family: $montserrat,
+  font-weight: 500,
+  text-transform: uppercase
+); 
+
+$mdc-typography-styles-headline4: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-headline5: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-headline6: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-subtitle1: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-subtitle2: (
+  font-family: $montserrat
+); 
+
+$mdc-typography-styles-body1: (
+  font-family: $openSans
+); 
+
+$mdc-typography-styles-body2: (
+  font-family: $openSans
+); 
+
+$mdc-typography-styles-caption: (
+  font-family: $openSans
+); 
+
+$mdc-typography-styles-button: (
+  font-family: $openSans
+); 
+
+$mdc-typography-styles-overline: (
+  font-family: $montserrat
+); 
+
+$mdc-card-styles: (
+  box-shadow: none
+);
+
+@import "material-components-web/material-components-web";
+
+
+// Overrides
+
+.mdc-card{
+  box-shadow: none;
+  border: 1px solid darken($mdc-theme-surface, 10%);
+}

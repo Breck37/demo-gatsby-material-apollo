@@ -3,5 +3,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+import React from 'react';
+import { ApolloProvider } from 'react-apollo';
+import { client } from './src/apollo/client';
 
-// You can delete this file if you're not using it
+// Styles
+import "./src/style/style.scss";
+
+export const wrapRootElement = ({ element }) => (
+  <ApolloProvider client={client}>{element}</ApolloProvider>
+);

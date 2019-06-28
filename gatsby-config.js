@@ -26,9 +26,31 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },{
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [
+          "node_modules/"
+        ]
+      }
     },
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "SWAPI",
+        // This is field under which it's accessible
+        fieldName: "swapi",
+        // Url to query from
+        url: "https://api.graphcms.com/simple/v1/swapi",
+
+        // refetch interval in seconds
+        refetchInterval: 60,
+      }
+    }
   ],
 }
